@@ -7,17 +7,29 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_Manha
 {
-    internal class Cliente
+    public class Cliente
     {
         
         private int Id;
         private string Nome;
         private int Telefone;
-        public Cliente(string nome, int id, int telefone)
+        private Endereco Endereco;
+        public Cliente(string nome, int id, int telefone, Endereco endereco)
         {
             Nome = nome;
             Telefone = telefone;
             Id = id;
+            Endereco = endereco;
+        }
+
+        public Endereco getEndereco()
+        {
+            return Endereco;
+        }
+
+        public void setEndereco(Endereco endereco)
+        {
+            Endereco = endereco;
         }
         public string getNome()
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_Manha
 {
-    internal class Endereco
+    public class Endereco
     {
 
         private string Rua;
@@ -24,6 +24,11 @@ namespace ConsoleApp_Manha
             Bairro = bairro;
             Cidade = cidade;
             Estado = estado;
+        }
+
+        public string EnderecoCompleto()
+        {
+            return Rua +  " " + Numero + " " + CEP + " " + Bairro + " " + Cidade +" "+Estado;
         }
         public string getRua()
         {
